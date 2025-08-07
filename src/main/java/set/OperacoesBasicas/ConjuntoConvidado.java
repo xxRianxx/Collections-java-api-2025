@@ -13,26 +13,29 @@ public class ConjuntoConvidado {
 
     public void adicionarConvidado(String nome, int codigoConvite) {
 
-        convidadoSet.add(new Convidado(nome,codigoConvite));
+        convidadoSet.add(new Convidado(nome, codigoConvite));
 
     }
-public void removerConvidadoPorCodigoConvite(int codigoConvite) {
+
+    public void removerConvidadoPorCodigoConvite(int codigoConvite) {
         Convidado convidadoParaRemover = null;
         for (Convidado c : convidadoSet) {
-           if (c.getCodigoConvite() == codigoConvite) {
-               convidadoParaRemover = c;
-               break;
-           }
+            if (c.getCodigoConvite() == codigoConvite) {
+                convidadoParaRemover = c;
+                break;
+            }
 
         }
         convidadoSet.remove(convidadoParaRemover);
-}
-public int contarConvidado(){
+    }
+
+    public int contarConvidado() {
         return convidadoSet.size();
-}
-public void exibirConvidado(){
+    }
+
+    public void exibirConvidado() {
         System.out.println(convidadoSet);
-}
+    }
 
     public static void main(String[] args) {
         ConjuntoConvidado conjunto = new ConjuntoConvidado();

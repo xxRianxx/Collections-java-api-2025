@@ -9,45 +9,29 @@ public class SomaNumeros {
     public SomaNumeros() {
         this.listNumero = new ArrayList<>();
     }
-    public void adicionarNumero(int numero){
+
+    public void adicionarNumero(int numero) {
         listNumero.add(numero);
     }
-    public int calcularSoma(){
+
+    public int calcularSoma() {
         List<Integer> list = new ArrayList<>();
         int soma = 0;
-        for(int i = 0; i < listNumero.size(); i++){
+        for (int i = 0; i < listNumero.size(); i++) {
             list.add(listNumero.get(i));
             soma = soma + listNumero.get(i);
         }
         return soma;
     }
-    public Integer calcularMaiorNumero(){
+
+    public Integer calcularMaiorNumero() {
         List<Integer> list = new ArrayList<>();
-        for(int i = 0; i < listNumero.size(); i++){
-           for (int j = i + 1; j < listNumero.size(); j++){
-               if(listNumero.get(i)>listNumero.get(j)){
-                   list.add(listNumero.get(i));
-                   return listNumero.get(i);
-               }else if(listNumero.get(i)<listNumero.get(j)){
-                   list.add(listNumero.get(j));
-                   return listNumero.get(j);
-               }
-
-           }
-
-
-        }
-        return null;
-
-    }
-    public Integer calcularMenorNumero(){
-        List<Integer> list = new ArrayList<>();
-        for(int i = 0; i < listNumero.size(); i++){
-            for (int j = i + 1; j < listNumero.size(); j++){
-                if(listNumero.get(i)<listNumero.get(j)){
+        for (int i = 0; i < listNumero.size(); i++) {
+            for (int j = i + 1; j < listNumero.size(); j++) {
+                if (listNumero.get(i) > listNumero.get(j)) {
                     list.add(listNumero.get(i));
                     return listNumero.get(i);
-                }else if(listNumero.get(i)>listNumero.get(j)){
+                } else if (listNumero.get(i) < listNumero.get(j)) {
                     list.add(listNumero.get(j));
                     return listNumero.get(j);
                 }
@@ -59,8 +43,29 @@ public class SomaNumeros {
         return null;
 
     }
-    public List<Integer> ExibirNumeros(List<Integer> list){
-      return list;
+
+    public Integer calcularMenorNumero() {
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < listNumero.size(); i++) {
+            for (int j = i + 1; j < listNumero.size(); j++) {
+                if (listNumero.get(i) < listNumero.get(j)) {
+                    list.add(listNumero.get(i));
+                    return listNumero.get(i);
+                } else if (listNumero.get(i) > listNumero.get(j)) {
+                    list.add(listNumero.get(j));
+                    return listNumero.get(j);
+                }
+
+            }
+
+
+        }
+        return null;
+
+    }
+
+    public List<Integer> ExibirNumeros(List<Integer> list) {
+        return list;
     }
 
 

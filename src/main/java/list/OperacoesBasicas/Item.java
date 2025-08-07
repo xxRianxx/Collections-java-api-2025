@@ -1,9 +1,9 @@
 package main.java.list.OperacoesBasicas;
 
 public class Item {
-private String nome;
-private double valor;
-private int quantidade;
+    private String nome;
+    private double valor;
+    private int quantidade;
 
     public Item(double valor, String nome, int quantidade) {
         this.valor = valor;

@@ -13,6 +13,7 @@ public class ListaTarefa {
     public void adicionarTarefa(String descricao) {
         tarefaList.add(new Tarefa(descricao));
     }
+
     public void removerTarefa(String descricao) {
         List<Tarefa> tarefasParaRemover = new ArrayList<>();
         for (Tarefa t : tarefaList) {
@@ -22,9 +23,11 @@ public class ListaTarefa {
         }
         tarefaList.removeAll(tarefasParaRemover);
     }
+
     public int obterNumeroTotalTarefa() {
         return tarefaList.size();
     }
+
     public void obterDescricoesTarefa() {
         System.out.println(tarefaList);
     }
@@ -35,7 +38,6 @@ public class ListaTarefa {
         listaTarefa.adicionarTarefa("tarefa2");
         listaTarefa.obterDescricoesTarefa();
         System.out.println(listaTarefa.obterNumeroTotalTarefa());
-
 
 
     }
